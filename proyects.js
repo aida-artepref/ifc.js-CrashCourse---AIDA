@@ -1,4 +1,4 @@
-const proyects=[
+export const proyects=[
     {
         name:"Model 1",
         id:"1",
@@ -44,15 +44,4 @@ const proyects=[
         id:"9",
         url:"https://ifcjs.github.io/ifcjs-crash-course/sample-apps/04/"
     }
-];
-
-const currentUrl = window.location.href;
-const url = new URL (currentUrl);
-const currentProyectID= url.searchParams.get("id");
-
-//Busca pryecto
-const currentProyect= proyects.find(proyect=> proyect.id===currentProyectID);
-
-//añade la url al iframe
-const iframe=document.getElementById('model-iframe');
-iframe.src=currentProyect.url;
+]
