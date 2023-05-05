@@ -208,14 +208,18 @@ h3 {
 
 .barra-lateral {
     background-color: #ffcc32;
-    width: 3.5
-    rem;
+    width: 3.5rem;
     display: flex;
     flex-direction: column;
     border-right: 1px solid var(--heavy-grey);
     /* justify-content: center; */
 }
-  
+
+
+#viewer-container {
+  flex-grow: 1;
+}
+
 
 .toolbar {
   padding: 5px;

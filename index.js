@@ -1,15 +1,15 @@
+import { Color } from 'three';
+import { IfcViewerAPI } from 'web-ifc-viewer';
 
-import{ proyects } from "./proyects.js";
+const container = document.getElementById('viewer-container');
+const viewer = new IfcViewerAPI({ container, backgroundColor: new Color(0xffffff) });
+viewer.grid.setGrid();
+viewer.axes.setAxes();
 
+async function loadIfc(url) {
+    await viewer.IFC.setWasmPath("./");
+    const model = await viewer.IFC.loadIfcUrl(url);
+    viewer.shadowDropper.renderShadow(model.modelID);
+}
 
-
-const currentUrl = window.location.href;
-const url = new URL (currentUrl);
-const currentProyectID= url.searchParams.get("id");
-
-//Busca pryecto
-const currentProyect= proyects.find(proyect=> proyect.id===currentProyectID);
-
-//añade la url al iframe
-const iframe=document.getElementById('model-iframe');
-iframe.src=currentProyect.url;
+loadIfc('./model-ifc/01.ifc');

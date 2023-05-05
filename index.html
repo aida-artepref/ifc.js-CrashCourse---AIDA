@@ -16,8 +16,10 @@
 <body>
     <div class="app">
         <div class="barra-lateral">
-            <a class="button-barra-lateral" href="gallery.html" style="margin: 5px;">
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path d="M14.4 4.2l-1.4-1.4-8 8c-.4.4-.4 1 0 1.4l8 8 1.4-1.4-7.3-7.3z"/></svg>
+            <a id="a-recarga" class="button-barra-lateral" onclick="location.reload();" style="margin: 5px;"  title="Recarga página">
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24">
+                    <path fill="#333" d="M12,22c-5.52,0-10-4.48-10-10S6.48,2,12,2s10,4.48,10,10h-2c0-4.41-3.59-8-8-8S4,7.59,4,12s3.59,8,8,8c2.31,0,4.43-0.99,5.9-2.57l-2.9-2.9h7v7l-3.5-3.5L12,22z"/>
+                </svg> 
             </a>
 
             <div class="toolbar">
@@ -38,11 +40,8 @@
                 </a>
             </div>
         </div>
-    
-        
-        <iframe id ="model-iframe" src="https://ifcjs.github.io/ifcjs-crash-course/sample-apps/01/" frameborder="0"></iframe>
-        
+        <div id="viewer-container"></div>
     </div>
-    <script type="module" src="index.js"></script>
+    <script src="bundle.js"></script>
 </body>
 </html>

@@ -12,8 +12,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "three": "^0.149.0",
-    "web-ifc": "^0.0.40"
+    "three": "^0.135.0",
+    "web-ifc": "^0.0.40",
+    "web-ifc-viewer": "^1.0.216"
   },
   "devDependencies": {
     "@rollup/plugin-json": "^6.0.0",
